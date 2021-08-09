@@ -26,7 +26,7 @@ public class LikeService {
         if (likeGiver == likeRecipient) {
             throw new BadRequestException("You cannot like yourself!");
         } else {
-            List<UserLike> validLikeList = em.createNamedQuery("validLike")
+            List validLikeList = em.createNamedQuery("validLike")
                     .setParameter("likeG", likeGiver)
                     .setParameter("likeR", likeRecipient)
                     .getResultList();
@@ -45,13 +45,13 @@ public class LikeService {
         User likeGiver = User.find("email", securityContext.getUserPrincipal().getName()).firstResult();
         User likeRecipient = userService.findById(likeRecipientId);
 
-        List<UserLike> validLikeList = em.createNamedQuery("validLike")
+        List validLikeList = em.createNamedQuery("validLike")
                 .setParameter("likeG", likeGiver)
                 .setParameter("likeR", likeRecipient)
                 .getResultList();
 
         if (!validLikeList.isEmpty()){
-            UserLike userLike = validLikeList.get(0);
+            UserLike userLike = (UserLike) validLikeList.get(0);
             userLike.delete();
         } else {
             throw new BadRequestException("You haven't liked this user yet!");

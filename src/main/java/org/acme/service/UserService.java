@@ -51,7 +51,6 @@ public class UserService implements PanacheRepository<User> {
 
         List countByRecipientList = countByRecipient.getResultList();
         System.out.println(Arrays.deepToString(countByRecipientList.toArray()));
-//
         Object mostLiked = countByRecipientList.get(0);
 
         return mostLiked;

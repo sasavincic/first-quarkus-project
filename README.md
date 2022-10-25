@@ -1,3 +1,7 @@
+#First Project in Quarkus
+
+This project was done as an expertiese test for my position as a Backend developer at MSG Life Odateam d.o.o.
+
 # code-with-quarkus Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.

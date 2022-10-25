@@ -1,6 +1,21 @@
-#First Project in Quarkus
+# First Project in Quarkus
 
 This project was done as an expertiese test for my position as a Backend developer at MSG Life Odateam d.o.o.
+
+The project is only backend for the purpose of my position in the company. 
+
+It allows you to signup users and give them likes. You can also:
+- Get the most liked user
+- Sign in a user
+- Get the currently signed in user
+- Get the most liked user
+- Remove like from a user
+
+## Technologies used:
+- Quarkus
+- Panache
+- BasicAuth
+- REST
 
 # code-with-quarkus Project
 
